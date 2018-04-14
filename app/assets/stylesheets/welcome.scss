@@ -1,0 +1,44 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top{
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input[type=submit]{
+   background-color: rgb(27, 96, 160);
+   border : 0px;
+   border-radius: 10px;
+   color: white;
+   height: 40px;
+   margin-left: 20px;
+}
+
+input[type=text]{
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(155, 147, 147);
+}
+
+label{
+    height: 40px;
+    margin-right: 10px;
+}
+h2{
+    margin-bottom : 0px;
+}

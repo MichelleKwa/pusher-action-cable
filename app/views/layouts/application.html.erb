@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PusherActionCable</title>
+    <%= csrf_meta_tags %>
+ 
+    <%= action_cable_meta_tag %>
+    
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%# <script src="https://js.pusher.com/4.1/pusher.min.js"></script> %>
+    <link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+    <%# <script>
+
+      // Enable pusher logging - don't include this in production
+      Pusher.logToConsole = true;
+
+      var pusher = new Pusher('PUSHER_API_KEY', {
+        cluster: 'eu',
+        encrypted: true
+      });
+    </script> %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

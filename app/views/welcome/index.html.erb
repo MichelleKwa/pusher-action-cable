@@ -1,0 +1,31 @@
+
+<h1 style="text-align:center">Real-time Comments!</h1>
+<div class="wrapper">
+    <img src="https://image4.owler.com/logo/pusher_owler_20160228_200254_large.png" height="150"alt="Pusher" />
+    <div class="top">
+        <%= form_with scope: :comment, url: '/comment/store', local: true do |form| %>
+        <div class="form-group">
+            <%= form.label :comment %>
+            <%= form.text_field :comment %>
+            <%= form.submit %>
+        </div>
+        
+        <% end %>
+    </div>
+
+    <div class="bottom" id="comment_section">
+        <h2>Comments</h2>
+        <% @comments.each do |comment| %>
+            <p><%= comment.comment %></p>
+        <% end %>
+    </div>
+
+    <script>
+        // var channel = pusher.subscribe('comment-channel');
+        // channel.bind('new-comment', function(data) {
+        //     let comment = data.comment;
+        //     var div = document.getElementById('comment_section');
+        //     div.innerHTML += `<p> ${comment} </p>`;
+        // });
+    </script>    
+</div>
